@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>Peekr Test</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="http://api.thepeekr.com/peekr.js" type="text/javascript"></script>
+    <script type="text/javascript">
+      $(document).ready(function() {
+        // Peekr.attach($(".peekr-1")[0]);
+        // Peekr.attach($(".peekr-2")[0]);
+        $(".peekr").attachPeekr();
+        var start = new Date().getTime();
+        $(".soundcloud").urlMetaData(function(data) {
+            var elapsed = new Date().getTime() - start;
+            $(".soundcloud_data").text(JSON.stringify(data));
+            $(".soundcloud_data_title").append(" in " + elapsed + " ms");
+        });
+      });
+    </script>
+
+    <!-- <link href="http://necolas.github.com/normalize.css/2.1.0/normalize.css" rel="stylesheet"> -->
+
+    <!-- https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc1/174569_6145315546_223556771_n.jpg -->
+  </head>
+  <body>
+    <h1>Test Youtube link</h2>
+    <p>Some text with a <a class="peekr peekr-1" href="http://www.youtube.com/watch?v=IkMPZ7WeDck">youtube video</a> link.</p>
+    <h1>Test Vimeo link</h2>
+    <p>Some text with a <a class="peekr peekr-2" href="http://vimeo.com/56895025">vimeo video</a> link.</p>
+    <h1>Test Soundcloud link</h2>
+    <p>Some text with a <a class="peekr soundcloud" href="https://soundcloud.com/djklarity">https://soundcloud.com/djklarity</a> link.</p>
+    <h2 class="soundcloud_data_title">Fetched Soundcloud Metadata</h2>
+    <p class="soundcloud_data"></p>
+
+    <h3>Imgur Link</h3>
+    <p><a class="peekr" href="http://imgur.com/zwfTMDC">http://imgur.com/zwfTMDC</a></p>
+    
+    <h3>Dress Link</h3>
+    <p><a class="peekr" href="http://bananarepublic.gap.com/browse/product.do?cid=50129&vid=1&pid=233878012">http://bananarepublic.gap.com/browse/product.do?cid=50129&vid=1&pid=233878012</a></p>
+
+    <h3>Reverb Nation</h3>
+    <p><a class="peekr" href="http://www.reverbnation.com/annuals">http://www.reverbnation.com/annuals</a></p>
+
+
+    <h3>New Egg</h3>
+    <p><a class="peekr" href="http://www.newegg.com/Special/ShellShocker.aspx?cm_sp=ShellShocker-_-9SIA10V0K94962-_-01282013_5">http://www.newegg.com/Special/ShellShocker.aspx?cm_sp=ShellShocker-_-9SIA10V0K94962-_-01282013_5</a></p>
+
+
+    <p><a class="peekr" href="http://www.cdc.gov">www.cdc.gov</a></p>
+
+
+    <h1>Hover samples</h1>
+    <h3>Image, Title, Description</h3>
+    <div class="_peekr" style="position:relative">
+      <div class="_peekr_container _peekr_container_full _peekr_arrow_top_left">
+        <div class="_peekr_image_container">
+          <div class="_peekr_image"
+            style="background-image: url('http://b.vimeocdn.com/ts/391/352/391352593_1280.jpg');"></div>
+        </div>
+        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
+        <div class="_peekr_url">http://vimeo.com/56433007</div>
+        <div class="_peekr_description">ONE WEEK RUN; JANUARY 18th-24th @ PLAZA Theater. 7:30PM. NOsolicitingthemovie.com Meet Dan Wood. He's lost his job, caught his long-time girlfriend cheating... asD asd asdasdfasdf</div>
+      </div>
+    </div>
+    <br/><br/>
+    <div class="_peekr" style="position:relative">
+      <div class="_peekr_container _peekr_container_full _peekr_arrow_top_right">
+        <div class="_peekr_image_container">
+          <div class="_peekr_image"
+            style="background-image: url('http://b.vimeocdn.com/ts/391/352/391352593_1280.jpg');"></div>
+        </div>
+        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
+        <div class="_peekr_url">http://vimeo.com/56433007</div>
+        <div class="_peekr_description">ONE WEEK RUN; JANUARY 18th-24th @ PLAZA Theater. 7:30PM. NOsolicitingthemovie.com Meet Dan Wood. He's lost his job, caught his long-time girlfriend cheating...</div>
+      </div>
+    </div>
+    <br/><br/>
+    <div class="_peekr" style="position:relative">
+      <div class="_peekr_container _peekr_container_full _peekr_arrow_bottom_left">
+        <div class="_peekr_image_container">
+          <div class="_peekr_image"
+            style="background-image: url('http://b.vimeocdn.com/ts/391/352/391352593_1280.jpg');"></div>
+        </div>
+        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
+        <div class="_peekr_url">http://vimeo.com/56433007</div>
+        <div class="_peekr_description">ONE WEEK RUN; JANUARY 18th-24th @ PLAZA Theater. 7:30PM. NOsolicitingthemovie.com Meet Dan Wood. He's lost his job, caught his long-time girlfriend cheating...</div>
+      </div>
+    </div>
+    <br/><br/>
+    <div class="_peekr" style="position:relative">
+      <div class="_peekr_container _peekr_container_full _peekr_arrow_bottom_right">
+        <div class="_peekr_image_container">
+          <div class="_peekr_image"
+            style="background-image: url('http://b.vimeocdn.com/ts/391/352/391352593_1280.jpg');"></div>
+        </div>
+        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
+        <div class="_peekr_url">http://vimeo.com/56433007</div>
+        <div class="_peekr_description">ONE WEEK RUN; JANUARY 18th-24th @ PLAZA Theater. 7:30PM. NOsolicitingthemovie.com Meet Dan Wood. He's lost his job, caught his long-time girlfriend cheating...</div>
+      </div>
+    </div>
+
+
+    <h3>Image, Title</h3>
+    <div class="_peekr" style="position:relative">
+      <div class="_peekr_container _peekr_container_image_title _peekr_arrow_bottom_left">
+        <div class="_peekr_image_container">
+          <div class="_peekr_image"
+            style="background-image: url('http://b.vimeocdn.com/ts/391/352/391352593_1280.jpg');"></div>
+        </div>
+        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
+        <div class="_peekr_url">http://vimeo.com/56433007</div>
+      </div>
+    </div>
+
+
+    <h3>Title</h3>
+    <div class="_peekr" style="position:relative">
+      <div class="_peekr_container _peekr_container_title _peekr_arrow_bottom_left">
+        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
+        <div class="_peekr_url">http://vimeo.com/56433007</div>
+      </div>
+    </div>
+
+
+
+    <h3>Title, Desc</h3>
+    <div class="_peekr" style="position:relative">
+      <div class="_peekr_container _peekr_container_title_desc _peekr_arrow_bottom_left">
+        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
+        <div class="_peekr_url">http://vimeo.com/56433007</div>
+        <div class="_peekr_description">ONE WEEK RUN; JANUARY 18th-24th @ PLAZA Theater. 7:30PM. NOsolicitingthemovie.com Meet Dan Wood. He's lost his job, caught his long-time girlfriend cheating...</div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
