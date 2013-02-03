@@ -1,136 +1,159 @@
-<html>
-  <head>
-    <title>Peekr Test</title>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-    <script src="http://api.thepeekr.com/peekr.js" type="text/javascript"></script>
-    <script type="text/javascript">
-      $(document).ready(function() {
-        // Peekr.attach($(".peekr-1")[0]);
-        // Peekr.attach($(".peekr-2")[0]);
-        $(".peekr").attachPeekr();
-        var start = new Date().getTime();
-        $(".soundcloud").urlMetaData(function(data) {
-            var elapsed = new Date().getTime() - start;
-            $(".soundcloud_data").text(JSON.stringify(data));
-            $(".soundcloud_data_title").append(" in " + elapsed + " ms");
-        });
-      });
-    </script>
-
-    <!-- <link href="http://necolas.github.com/normalize.css/2.1.0/normalize.css" rel="stylesheet"> -->
-
-    <!-- https://fbcdn-profile-a.akamaihd.net/hprofile-ak-frc1/174569_6145315546_223556771_n.jpg -->
-  </head>
-  <body>
-    <h1>Test Youtube link</h2>
-    <p>Some text with a <a class="peekr peekr-1" href="http://www.youtube.com/watch?v=IkMPZ7WeDck">youtube video</a> link.</p>
-    <h1>Test Vimeo link</h2>
-    <p>Some text with a <a class="peekr peekr-2" href="http://vimeo.com/56895025">vimeo video</a> link.</p>
-    <h1>Test Soundcloud link</h2>
-    <p>Some text with a <a class="peekr soundcloud" href="https://soundcloud.com/djklarity">https://soundcloud.com/djklarity</a> link.</p>
-    <h2 class="soundcloud_data_title">Fetched Soundcloud Metadata</h2>
-    <p class="soundcloud_data"></p>
-
-    <h3>Imgur Link</h3>
-    <p><a class="peekr" href="http://imgur.com/zwfTMDC">http://imgur.com/zwfTMDC</a></p>
-    
-    <h3>Dress Link</h3>
-    <p><a class="peekr" href="http://bananarepublic.gap.com/browse/product.do?cid=50129&vid=1&pid=233878012">http://bananarepublic.gap.com/browse/product.do?cid=50129&vid=1&pid=233878012</a></p>
-
-    <h3>Reverb Nation</h3>
-    <p><a class="peekr" href="http://www.reverbnation.com/annuals">http://www.reverbnation.com/annuals</a></p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>the peekr</title>
+  <meta name="description" content="Add smart preview tooltips to any url with the peekr"/>
+  <meta property="og:title" content="the peekr"></meta>
+  <meta property="og:image" content="http://thepeekr.com/img/logo.png"></meta>
+  <meta property="og:description" content="Add smart preview tooltips to any url with the peekr"></meta>
+  <meta property="og:url" content="http://thepeekr.com"></meta>
 
 
-    <h3>New Egg</h3>
-    <p><a class="peekr" href="http://www.newegg.com/Special/ShellShocker.aspx?cm_sp=ShellShocker-_-9SIA10V0K94962-_-01282013_5">http://www.newegg.com/Special/ShellShocker.aspx?cm_sp=ShellShocker-_-9SIA10V0K94962-_-01282013_5</a></p>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="css/bootstrap-responsive.min.css" rel="stylesheet"/>
+  <link href="css/screen.css" rel="stylesheet"/>
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script src="http://localhost:5000/peekr.js" type="text/javascript"></script>
+  <!--<script src="http://api.thepeekr.com/peekr.js" type="text/javascript"></script>-->
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $(".peekr").attachPeekr();
+    })
+  </script>
+</head>
+<body data-spy="scroll" data-target=".navbar">
 
-
-    <p><a class="peekr" href="http://www.cdc.gov">www.cdc.gov</a></p>
-
-
-    <h1>Hover samples</h1>
-    <h3>Image, Title, Description</h3>
-    <div class="_peekr" style="position:relative">
-      <div class="_peekr_container _peekr_container_full _peekr_arrow_top_left">
-        <div class="_peekr_image_container">
-          <div class="_peekr_image"
-            style="background-image: url('http://b.vimeocdn.com/ts/391/352/391352593_1280.jpg');"></div>
+  <div class="navbar navbar-fixed-top">
+    <div class="navbar-inner">
+      <div class="container">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/">the peekr</a>
+        <div class="nav-collapse collapse">
+          <ul class="nav">
+            <li class="active"><a href="#overview">Overview</a></li>
+            <li><a href="#tooltip">Tooltip</a></li>
+            <li><a href="#api">API</a></li>
+            <li><a href="#help">Help</a></li>
+          </ul>
         </div>
-        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
-        <div class="_peekr_url">http://vimeo.com/56433007</div>
-        <div class="_peekr_description">ONE WEEK RUN; JANUARY 18th-24th @ PLAZA Theater. 7:30PM. NOsolicitingthemovie.com Meet Dan Wood. He's lost his job, caught his long-time girlfriend cheating... asD asd asdasdfasdf</div>
+        <a class="brand beta">beta!</a>
       </div>
     </div>
-    <br/><br/>
-    <div class="_peekr" style="position:relative">
-      <div class="_peekr_container _peekr_container_full _peekr_arrow_top_right">
-        <div class="_peekr_image_container">
-          <div class="_peekr_image"
-            style="background-image: url('http://b.vimeocdn.com/ts/391/352/391352593_1280.jpg');"></div>
-        </div>
-        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
-        <div class="_peekr_url">http://vimeo.com/56433007</div>
-        <div class="_peekr_description">ONE WEEK RUN; JANUARY 18th-24th @ PLAZA Theater. 7:30PM. NOsolicitingthemovie.com Meet Dan Wood. He's lost his job, caught his long-time girlfriend cheating...</div>
-      </div>
-    </div>
-    <br/><br/>
+  </div>
+
+  <header id="overview" class="container">
+    <h1>Peek behind any link</h1>
+    <p class="lead">
+      the peekr quickly grabs metadata for any <a href="http://vimeo.com/56298775">url</a> and creates tooltips
+    </p>
     <div class="_peekr" style="position:relative">
       <div class="_peekr_container _peekr_container_full _peekr_arrow_bottom_left">
         <div class="_peekr_image_container">
           <div class="_peekr_image"
-            style="background-image: url('http://b.vimeocdn.com/ts/391/352/391352593_1280.jpg');"></div>
+            style="background-image: url('img/407860770_1280.jpg');"></div>
         </div>
-        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
-        <div class="_peekr_url">http://vimeo.com/56433007</div>
-        <div class="_peekr_description">ONE WEEK RUN; JANUARY 18th-24th @ PLAZA Theater. 7:30PM. NOsolicitingthemovie.com Meet Dan Wood. He's lost his job, caught his long-time girlfriend cheating...</div>
+        <div class="_peekr_title">Moonwalk</div>
+        <div class="_peekr_url">http://vimeo.com/56298775</div>
+        <div class="_peekr_description">The ultimate full moon shot.  Dean Potter walks a highline at Cathedral Peak as the sun sets and the moon rises.  Shot from over 1 mile away with a Canon 800mm and...</div>
       </div>
     </div>
-    <br/><br/>
-    <div class="_peekr" style="position:relative">
-      <div class="_peekr_container _peekr_container_full _peekr_arrow_bottom_right">
-        <div class="_peekr_image_container">
-          <div class="_peekr_image"
-            style="background-image: url('http://b.vimeocdn.com/ts/391/352/391352593_1280.jpg');"></div>
-        </div>
-        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
-        <div class="_peekr_url">http://vimeo.com/56433007</div>
-        <div class="_peekr_description">ONE WEEK RUN; JANUARY 18th-24th @ PLAZA Theater. 7:30PM. NOsolicitingthemovie.com Meet Dan Wood. He's lost his job, caught his long-time girlfriend cheating...</div>
-      </div>
+  </header>
+
+  <section class="container">
+    <div class="page-header">
     </div>
+    <p>Add a multimedia tooltip to any link on your website!  The peekr takes care of grabbing, understanding, unrolling, and formatting all the data on the page that your links point to and shows your users a name, image, and description.  The plugin works with or without <a class="peekr" href="http://jquery.com">jQuery</a>.</p>
+    <p>The peekr works by grabbing the metadata that is present on every page on the internet.  It looks at the standard HTML metadata in the header, and includes all <a class="peekr" href="http://ogp.me">Open Graph</a> metadata.  It works automatically for all web sites, including <a class="peekr" href="http://www.facebook.com">Facebook<a>, <a class="peekr" href="http://www.youtube.com">YouTube</a>, <a class="peekr" href="http://vimeo.com">Vimeo</a>, <a class="peekr" href="http://www.soundcloud.com">Soundcloud</a>, and all the pages inside, like <a class="peekr" href="https://soundcloud.com/macklemore">soundcloud.com/macklemore</a> or <a class="peekr" href="http://vimeo.com/56298775">vimeo.com/56298775</a>.  You can also peek behind link shorteners, like <a class="peekr" href="http://bit.ly/WnKPzd">http://bit.ly/WnKPzd</a></p>
+    <p>The peekr is also a free data API that will fetch the metadata for any website and return it in JSON.  It also supports JSONP to include in your websites on the client-side.</p>
+  </section>
 
-
-    <h3>Image, Title</h3>
-    <div class="_peekr" style="position:relative">
-      <div class="_peekr_container _peekr_container_image_title _peekr_arrow_bottom_left">
-        <div class="_peekr_image_container">
-          <div class="_peekr_image"
-            style="background-image: url('http://b.vimeocdn.com/ts/391/352/391352593_1280.jpg');"></div>
-        </div>
-        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
-        <div class="_peekr_url">http://vimeo.com/56433007</div>
-      </div>
+  <section id="tooltip" class="container">
+    <div class="page-header">
+      <h1>Tooltip</h1>
     </div>
+    <p>Enable the peekr by including the javascript api on your page.  You can do this by including the peekr library in your script tags:</p>
+    <pre>
+&lt;script src="http://api.thepeekr.com/peekr.js" type="text/javascript"&gt;&lt;/script&gt;</pre>
 
+    <p>To add a tooltip to a link, you need to attach the peekr to it.  You can do this with or without <a class="peekr" href="http://jquery.com">jQuery</a>. Due to awesomeness and ease of user, however, we highly recommend jQuery.</p>
 
-    <h3>Title</h3>
-    <div class="_peekr" style="position:relative">
-      <div class="_peekr_container _peekr_container_title _peekr_arrow_bottom_left">
-        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
-        <div class="_peekr_url">http://vimeo.com/56433007</div>
-      </div>
+    <h3>jQuery</h3>
+    <p>Simply call <code>attachPeekr()</code> on the jQuery-wrapped elements you want to add the peekr to.  The element must have an <code>href</code> attribute to enable the tooltip.</p>
+    <pre>
+&lt;script type="text/javascript"&gt;
+  $(".peekr").attachPeekr()
+&lt;/script&gt;
+...
+&lt;a class="peekr" href="http://www.youtube.com"&gt;YouTube&lt;/a&gt;</pre>
+
+    And you'll enable the tooltips for any anchor tag that is class <code>peekr</code>
+
+    <h3>without jQuery</h3>
+    <p>If you're not using jQuery, you'll have to pass in the actual DOM element to the <code>Peekr.attach</code>.</p>
+    <pre>
+&lt;script type="text/javascript"&gt;
+  Peekr.attach(document.getElementById("peekr-link"))
+&lt;/script&gt;
+...
+&lt;a id="peekr-link" href="http://www.youtube.com"&gt;YouTube&lt;/a&gt;</pre>
+  </section>  
+
+  <section id="api" class="container">
+    <div class="page-header">
+      <h1>API</h1>
     </div>
+      <p>the peekr also provides a data API that you can call to get the metadata for any url.  You can use the jQuery library or call the API directly.  Additionally, you can make HTTP calls to the peekr data services directly.</p>
+      <h3>jQuery</h3>
+      <p>With the jQuery plugin, you can call <code>urlMetaData()</code> on any element with an href attribute, and the peekr will return the metadata for that page.</p>
+      <pre>
+&lt;script type="text/javascript"&gt;
+  function handleUrlMetadata(data) {...};
+  $(".peekr").urlMetaData(handleUrlMetadata);
+&lt;/script&gt;</pre>
 
+      <h3>without jQuery</h3>
+      <p>Without jQuery, simply call <code>Peekr.data(url, callback)</code> to get the metadata.</p>
+      <pre>
+&lt;script type="text/javascript"&gt;
+  function handleUrlMetadata(data) {...};
+  Peekr.urlMetaData("http://www.reddit.com", handleUrlMetadata);
+&lt;/script&gt;</pre>
 
+      <h3>HTTP</h3>
+      <p>If you need to get url metadata outside of a web browser (or don't want to use the peekr javascript library), the peekr services are completely open. Simply call <code>http://api.thepeekr.com/data</code> with the parameters:</p>
+      <ul>
+        <li><strong>url</strong> - The full url to the page to fetch (including http: or https:)</li>
+        <li><strong>callback</strong> - An optional JSONP callback.  If included, the result with be wrapped in a JSONP callback.</li>
+      </ul>
+      <p>For example, to get the metadata for <code>http://www.heroku.com</code>, you can call:
+      <pre>curl http://api.thepeekr.com/data?url=http://www.heroku.com</pre>
+      <p>which will return:</p>
+      <pre>
+{
+  "title":"Heroku | Cloud Application Platform",
+  "image":"https://nav.heroku.com/images/logos/touch.png",
+  "description":"Heroku is the leading open language cloud application platform and supports Ruby, Java, Python, Clojure, Scala, Node.js. and custom language buildpacks.",
+  "url":"http://www.heroku.com/
+}</pre>
 
-    <h3>Title, Desc</h3>
-    <div class="_peekr" style="position:relative">
-      <div class="_peekr_container _peekr_container_title_desc _peekr_arrow_bottom_left">
-        <div class="_peekr_title">OFFICIAL NO Soliciting Trailer</div>
-        <div class="_peekr_url">http://vimeo.com/56433007</div>
-        <div class="_peekr_description">ONE WEEK RUN; JANUARY 18th-24th @ PLAZA Theater. 7:30PM. NOsolicitingthemovie.com Meet Dan Wood. He's lost his job, caught his long-time girlfriend cheating...</div>
-      </div>
+  </section>
+
+  <section id="help" class="container">
+    <div class="page-header">
+      <h1>Help</h1>
     </div>
+    <p>Frequently asked questions coming when questions are asked frequently.</p>
+  </section>
 
-
-  </body>
+  <section id="contact" class="container">
+  <p><a class="peekr" href="http://thepeekr.com">the peekr</a> was created by <a class="peekr" href="http://callawaywilson.com">Adam Wilson</a> - <a href="mailto:adam@callawaywilson.com">adam@callawaywilson.com</a></p>
+  <p>Powered by <a class="peekr" href="http://heroku.com">Heroku</a> and <a class="peekr" href="http://github.com">Github</a> - &copy; thepeekr.com</p>
+  </section>
+</body>
 </html>

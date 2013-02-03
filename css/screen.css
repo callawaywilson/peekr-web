@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Lobster';
+    src: url('../font/lobster_1.3-webfont.eot');
+    src: url('../font/lobster_1.3-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/lobster_1.3-webfont.woff') format('woff'),
+         url('../font/lobster_1.3-webfont.ttf') format('truetype'),
+         url('../font/lobster_1.3-webfont.svg#lobster_1.3regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.logo {
+  font-family: Lobster;
+}
+
+header {
+  padding-top: 60px;
+}
+
+.container {
+  max-width: 800px;
+}
+
+.navbar .brand {
+  width: 100px;
+  height: 20px;
+  font-family: Lobster;
+  font-size: 24px;
+  text-align: center;
+}
+.navbar .beta {
+  width: 100px;
+  height: 20px;
+  font-family: Lobster;
+  font-size: 24px;
+  text-align: center;
+  float: right;
+}
+
+header {
+  color: #444444;
+  text-align: center;
+  margin: 30px 0;
+}
+header .lead {
+  margin-bottom: 10px;
+}
+header ._peekr {
+  position: relative;
+  text-align: left;
+  margin: 0 auto;
+  width: 450px;
+  z-index: 0;
+}
+header a:hover {
+  text-decoration: none !important;
+}
+
+@media (max-width: 979px) {
+  header {
+    padding-top: 0;
+  }
+}
+@media (max-width: 500px) {
+  header ._peekr {
+    width: 300px;
+  }
+  header ._peekr ._peekr_container {
+    width: 300px;
+  }
+}
+
+.page-header {
+  padding-bottom: 9px;
+  margin: 20px 0 30px;
+  border-bottom: 1px solid #eeeeee;
+  color: #5a5a5a;
+}
+
+#contact {
+  text-align: center;
+  margin: 40px auto;
+}
