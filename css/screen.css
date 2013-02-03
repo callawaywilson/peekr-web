@@ -78,3 +78,8 @@ header a:hover {
   margin: 40px auto;
 }
 
+.addthis_toolbox {
+  clear: both;
+  width: 360px;
+  margin: 0 auto;
+}
