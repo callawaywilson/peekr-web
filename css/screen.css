@@ -9,10 +9,6 @@
     font-style: normal;
 }
 
-.logo {
-  font-family: Lobster;
-}
-
 header {
   padding-top: 60px;
 }
@@ -80,4 +76,8 @@ header a:hover {
 #contact {
   text-align: center;
   margin: 40px auto;
+}
+
+.share {
+  margin-top: 20px
 }
