@@ -59,10 +59,10 @@ header a:hover {
 }
 @media (max-width: 500px) {
   header ._peekr {
-    width: 300px;
+    width: 260px;
   }
   header ._peekr ._peekr_container {
-    width: 300px;
+    width: 260px;
   }
 }
 
