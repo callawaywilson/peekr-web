@@ -44,7 +44,7 @@ header .lead {
 header ._peekr {
   position: relative;
   text-align: left;
-  margin: 0 auto 30px auto;
+  margin: 0 auto  ;
   width: 450px;
   z-index: 0;
 }
