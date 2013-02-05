@@ -83,3 +83,12 @@ header a:hover {
   width: 210px;
   margin: 20px auto 0;
 }
+
+#peekUrl {
+  width: 380px;
+}
+
+.peekr-preview-tooltip {
+  margin: 20px auto;
+  width: 450px;
+}

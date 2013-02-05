@@ -16,11 +16,7 @@
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <script src="http://api.thepeekr.com/peekr.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $(".peekr").attachPeekr();
-    })
-  </script>
+  <script src="js/peekr_home.js" type="text/javascript"></script>
   <script type="text/javascript">
 
     var _gaq = _gaq || [];
@@ -91,6 +87,22 @@
     <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
     <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-510dd1ed1fb3da73"></script>
     <!-- AddThis Button END -->
+
+    <div class="well">
+      <form id="peekr-preview" class="form-horizontal">
+      <div class="control-group">
+        <label class="control-label" for="inputEmail">Try it out!</label>
+        <div class="controls">
+          <div class="input-append">
+            <input id="peekUrl" type="text" placeholder="Enter a URL to peek">
+            <button class="btn btn-peek" type="submit">Peek!</button>
+          </div>
+        </div>
+      </div>
+      <div class="peekr-preview-tooltip"></div>
+      <div class="peekr-preview-data"></div>
+    </div>
+
   </section>
 
   <section id="tooltip" class="container">
