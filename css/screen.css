@@ -84,8 +84,12 @@ header a:hover {
   margin: 20px auto 0;
 }
 
+#peek-input-append {
+  width: 65%;
+}
+
 #peekUrl {
-  width: 380px;
+  width: 100%;
 }
 
 .peekr-preview-tooltip {
