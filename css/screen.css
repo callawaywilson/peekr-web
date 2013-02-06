@@ -18,16 +18,16 @@ header {
 }
 
 .navbar .brand {
-  width: 100px;
+  max-width: 120px;
   height: 20px;
-  font-family: Lobster;
+  font-family: 'Lobster';
   font-size: 24px;
   text-align: center;
 }
 .navbar .beta {
   width: 100px;
   height: 20px;
-  font-family: Lobster;
+  font-family: 'Lobster';
   font-size: 24px;
   text-align: center;
   float: right;
