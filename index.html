@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="utf-8">
   <title>the peekr</title>
-  <meta name="description" content="Add smart preview tooltips to any url with the peekr"/>
-  <meta property="og:title" content="the peekr"></meta>
-  <meta property="og:image" content="http://thepeekr.com/img/logo.png"></meta>
-  <meta property="og:description" content="Add smart preview tooltips to any url with the peekr"></meta>
-  <meta property="og:url" content="http://thepeekr.com"></meta>
+  <meta name="description" content="Add smart preview tooltips to any url with the peekr">
+  <meta property="og:title" content="the peekr">
+  <meta property="og:image" content="http://thepeekr.com/img/logo.png">
+  <meta property="og:description" content="Add smart preview tooltips to any url with the peekr">
+  <meta property="og:url" content="http://thepeekr.com">
 
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -77,7 +78,7 @@
     <div class="page-header">
     </div>
     <p>Add a multimedia tooltip to any link on your website!  The peekr takes care of grabbing, understanding, unrolling, and formatting all the data on the page that your links point to and shows your users a name, image, and description.  The plugin works with or without <a class="peekr" href="http://jquery.com">jQuery</a>.</p>
-    <p>The peekr works by grabbing the metadata that is present on every page on the internet.  It looks at the standard HTML metadata in the header, and includes all <a class="peekr" href="http://ogp.me">Open Graph</a> metadata.  It works automatically for all web sites, including <a class="peekr" href="http://www.facebook.com">Facebook<a>, <a class="peekr" href="http://www.youtube.com">YouTube</a>, <a class="peekr" href="http://vimeo.com">Vimeo</a>, <a class="peekr" href="http://www.soundcloud.com">Soundcloud</a>, and all the pages inside, like <a class="peekr" href="https://soundcloud.com/macklemore">soundcloud.com/macklemore</a> or <a class="peekr" href="http://vimeo.com/56298775">vimeo.com/56298775</a>.  You can also peek behind link shorteners, like <a class="peekr" href="http://bit.ly/WnKPzd">http://bit.ly/WnKPzd</a></p>
+    <p>The peekr works by grabbing the metadata that is present on every page on the internet.  It looks at the standard HTML metadata in the header, and includes all <a class="peekr" href="http://ogp.me">Open Graph</a> metadata.  It works automatically for all web sites, including <a class="peekr" href="http://www.facebook.com">Facebook</a>, <a class="peekr" href="http://www.youtube.com">YouTube</a>, <a class="peekr" href="http://vimeo.com">Vimeo</a>, <a class="peekr" href="http://www.soundcloud.com">Soundcloud</a>, and all the pages inside, like <a class="peekr" href="https://soundcloud.com/macklemore">soundcloud.com/macklemore</a> or <a class="peekr" href="http://vimeo.com/56298775">vimeo.com/56298775</a>.  You can also peek behind link shorteners, like <a class="peekr" href="http://bit.ly/WnKPzd">http://bit.ly/WnKPzd</a></p>
     <p>The peekr is also a free data API that will fetch the metadata for any website and return it in JSON.  It also supports JSONP to include in your websites on the client-side.</p>
     <!-- AddThis Button BEGIN -->
     <div class="addthis_toolbox addthis_default_style ">
@@ -90,15 +91,16 @@
 
     <div class="well">
       <form id="peekr-preview" class="form-horizontal">
-      <div class="control-group">
-        <label class="control-label" for="inputEmail">Try it out!</label>
-        <div class="controls">
-          <div class="input-append" id="peek-input-append">
-            <input id="peekUrl" type="text" placeholder="Enter a URL to peek">
-            <button class="btn btn-peek" type="submit">Peek!</button>
+        <div class="control-group">
+          <label class="control-label" for="peekrUrl">Try it out!</label>
+          <div class="controls">
+            <div class="input-append" id="peek-input-append">
+              <input id="peekUrl" name="peekrUrl" type="text" placeholder="Enter a URL to peek"></input>
+              <button class="btn btn-peek" type="submit">Peek!</button>
+            </div>
           </div>
         </div>
-      </div>
+      </form>
       <div class="peekr-preview-tooltip"></div>
       <div class="peekr-preview-data"></div>
     </div>
