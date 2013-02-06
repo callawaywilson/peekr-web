@@ -5,7 +5,7 @@ $(document).ready(function() {
 
 function previewPeek(e) {
   e.preventDefault();
-  var val = $("#peekUrl").val();
+  var val = $("#peekrUrl").val();
   if (!val || /^\s*$/.test(val)) return false;
   startPeek();
   Peekr.data(val, function(data) {
