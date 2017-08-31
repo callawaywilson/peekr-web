@@ -10,14 +10,14 @@
 }
 
 header {
-  padding-top: 60px;
+  padding-top: 40px;
 }
 
 .container {
   max-width: 800px;
 }
 
-.navbar .brand {
+.navbar .navbar-brand {
   max-width: 120px;
   height: 20px;
   font-family: 'Lobster';
@@ -82,10 +82,6 @@ header a:hover {
   clear: both;
   width: 210px;
   margin: 20px auto 0;
-}
-
-#peek-input-append {
-  width: 65%;
 }
 
 #peekUrl {
